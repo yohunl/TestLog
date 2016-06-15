@@ -12,6 +12,10 @@
 		099A57AF1D0E8E18007AFAFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099A57AE1D0E8E18007AFAFE /* ViewController.m */; };
 		099A57B11D0E8E18007AFAFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 099A57B01D0E8E18007AFAFE /* Assets.xcassets */; };
 		099A57B41D0E8E18007AFAFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 099A57B21D0E8E18007AFAFE /* LaunchScreen.storyboard */; };
+		09FCE9B91D1009B000DBE4C5 /* HttpServerLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FCE9B81D1009B000DBE4C5 /* HttpServerLogger.m */; };
+		09FCE9BD1D10111800DBE4C5 /* SystemLogMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FCE9BC1D10111800DBE4C5 /* SystemLogMessage.m */; };
+		09FCE9C41D10195B00DBE4C5 /* SystemLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FCE9C31D10195B00DBE4C5 /* SystemLogManager.m */; };
+		5886B8431E57003B4767F0F4 /* libPods-TestNSlog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB23BAD439E3D110AB71F70D /* libPods-TestNSlog.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,15 @@
 		099A57B01D0E8E18007AFAFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		099A57B31D0E8E18007AFAFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		099A57B51D0E8E18007AFAFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09FCE9B71D1009B000DBE4C5 /* HttpServerLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpServerLogger.h; sourceTree = "<group>"; };
+		09FCE9B81D1009B000DBE4C5 /* HttpServerLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpServerLogger.m; sourceTree = "<group>"; };
+		09FCE9BB1D10111800DBE4C5 /* SystemLogMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemLogMessage.h; sourceTree = "<group>"; };
+		09FCE9BC1D10111800DBE4C5 /* SystemLogMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemLogMessage.m; sourceTree = "<group>"; };
+		09FCE9C21D10195B00DBE4C5 /* SystemLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemLogManager.h; sourceTree = "<group>"; };
+		09FCE9C31D10195B00DBE4C5 /* SystemLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemLogManager.m; sourceTree = "<group>"; };
+		AB23BAD439E3D110AB71F70D /* libPods-TestNSlog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestNSlog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0E21BAAE7CA1C03901FEB99 /* Pods-TestNSlog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestNSlog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestNSlog/Pods-TestNSlog.debug.xcconfig"; sourceTree = "<group>"; };
+		FF7629A606A954AD6A0B6410 /* Pods-TestNSlog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestNSlog.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestNSlog/Pods-TestNSlog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5886B8431E57003B4767F0F4 /* libPods-TestNSlog.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +56,8 @@
 			children = (
 				099A57A61D0E8E18007AFAFE /* TestNSlog */,
 				099A57A51D0E8E18007AFAFE /* Products */,
+				A9E849F8E2388B2203451051 /* Pods */,
+				477F3C8214C425FD653A23CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +72,8 @@
 		099A57A61D0E8E18007AFAFE /* TestNSlog */ = {
 			isa = PBXGroup;
 			children = (
+				09FCE9C11D10189D00DBE4C5 /* server */,
+				09FCE9BA1D1010F000DBE4C5 /* Log */,
 				099A57AA1D0E8E18007AFAFE /* AppDelegate.h */,
 				099A57AB1D0E8E18007AFAFE /* AppDelegate.m */,
 				099A57AD1D0E8E18007AFAFE /* ViewController.h */,
@@ -76,6 +94,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		09FCE9BA1D1010F000DBE4C5 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				09FCE9C21D10195B00DBE4C5 /* SystemLogManager.h */,
+				09FCE9C31D10195B00DBE4C5 /* SystemLogManager.m */,
+				09FCE9BB1D10111800DBE4C5 /* SystemLogMessage.h */,
+				09FCE9BC1D10111800DBE4C5 /* SystemLogMessage.m */,
+			);
+			name = Log;
+			sourceTree = "<group>";
+		};
+		09FCE9C11D10189D00DBE4C5 /* server */ = {
+			isa = PBXGroup;
+			children = (
+				09FCE9B71D1009B000DBE4C5 /* HttpServerLogger.h */,
+				09FCE9B81D1009B000DBE4C5 /* HttpServerLogger.m */,
+			);
+			name = server;
+			sourceTree = "<group>";
+		};
+		477F3C8214C425FD653A23CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB23BAD439E3D110AB71F70D /* libPods-TestNSlog.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9E849F8E2388B2203451051 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0E21BAAE7CA1C03901FEB99 /* Pods-TestNSlog.debug.xcconfig */,
+				FF7629A606A954AD6A0B6410 /* Pods-TestNSlog.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 099A57B81D0E8E18007AFAFE /* Build configuration list for PBXNativeTarget "TestNSlog" */;
 			buildPhases = (
+				2A124A018B7995A6033687B0 /* 📦 Check Pods Manifest.lock */,
 				099A57A01D0E8E17007AFAFE /* Sources */,
 				099A57A11D0E8E17007AFAFE /* Frameworks */,
 				099A57A21D0E8E17007AFAFE /* Resources */,
+				910730FC38F711D93AF4E654 /* 📦 Embed Pods Frameworks */,
+				34A9B7FC80E2EE507B98D4B1 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,11 +198,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A124A018B7995A6033687B0 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		34A9B7FC80E2EE507B98D4B1 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestNSlog/Pods-TestNSlog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		910730FC38F711D93AF4E654 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestNSlog/Pods-TestNSlog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		099A57A01D0E8E17007AFAFE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09FCE9B91D1009B000DBE4C5 /* HttpServerLogger.m in Sources */,
+				09FCE9BD1D10111800DBE4C5 /* SystemLogMessage.m in Sources */,
+				09FCE9C41D10195B00DBE4C5 /* SystemLogManager.m in Sources */,
 				099A57AF1D0E8E18007AFAFE /* ViewController.m in Sources */,
 				099A57AC1D0E8E18007AFAFE /* AppDelegate.m in Sources */,
 				099A57A91D0E8E18007AFAFE /* main.m in Sources */,
@@ -249,9 +358,11 @@
 		};
 		099A57B91D0E8E18007AFAFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0E21BAAE7CA1C03901FEB99 /* Pods-TestNSlog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestNSlog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Yohunl.TestNSlog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -260,9 +371,11 @@
 		};
 		099A57BA1D0E8E18007AFAFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF7629A606A954AD6A0B6410 /* Pods-TestNSlog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestNSlog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Yohunl.TestNSlog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,6 +401,7 @@
 				099A57BA1D0E8E18007AFAFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

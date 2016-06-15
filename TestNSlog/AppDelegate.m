@@ -19,8 +19,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
      self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
      ViewController *controller = [[ViewController alloc] init];
+     UINavigationController *nava = [[UINavigationController alloc]initWithRootViewController:controller];
+    
 
-     [self.window setRootViewController:controller];
+     [self.window setRootViewController:nava];
      [self.window makeKeyAndVisible];
     return YES;
 }
